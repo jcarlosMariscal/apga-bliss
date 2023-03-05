@@ -1,3 +1,9 @@
+<?php
+  session_start();//iniciamos una sesión
+  if(isset($_SESSION['user_token'])){
+      header('location: ../index.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="../assets/img/icon.png" type="image/x-icon">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Login | Apga Bliss</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
