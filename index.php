@@ -33,10 +33,6 @@ if (!isset($_SESSION['user_token'])) {
       $seccion = "Espacios";
       $js = "espacios.js";
     break;
-    case 'usuario':
-      $page = "usuario.php";
-      $seccion = "Usuario";
-    break;
     case 'configuracion':
       $page = "configuracion.php";
       $seccion = "Configuración";

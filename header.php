@@ -3,10 +3,10 @@
   <!-- Topbar -->
   <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
     <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle">
       <i class="fa fa-bars"></i>
     </button>
-    <div><b><?php echo strtoupper($seccion); ?></b></div>
+    <div class="nombre-modulo mr-2"><b><?php echo strtoupper($seccion); ?></b></div>
     <!-- Topbar Search -->
     <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="background: purple;">
       <div class="input-group">
@@ -22,10 +22,9 @@
     <form class="d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
       <div class="input-group">
         <!-- <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"> -->
-        <select name="select_espacio" id="select_espacio" class="form-control bg-light border-0 small">
-          <option disabled >Cambiar Espacio</option>
-          <option value="1" >Espacio Personal</option>
-          <option value="1" >Espacio Familiar</option>
+        <select name="select_espacio" id="select_espacio" class="form-control bg-light border-0 small" v-model="select_espacio" @change="cambiarEspacio()">
+          <option value="personal" >Personal</option>
+          <option value="familiar" >Familiar</option>
         </select>
         <!-- <div class="input-group-append">
           <button class="btn btn-primary" type="button">
@@ -39,7 +38,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Nav Item - Search Dropdown (Visible Only XS) -->
       <!-- <li class="nav-item dropdown no-arrow d-sm-none"> -->
-      <li class="nav-item dropdown no-arrow">
+      <li class="nav-item dropdown no-arrow nav-search">
         <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-search fa-fw"></i>
         </a>
@@ -58,7 +57,7 @@
         </div>
       </li>
       <!-- Nav Item - Alerts -->
-      <li class="nav-item dropdown no-arrow mx-1">
+      <li class="nav-item dropdown no-arrow mx-1 nav-alerts">
         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-bell fa-fw"></i>
           <!-- Counter - Alerts -->
@@ -105,7 +104,7 @@
       </li>
 
       <!-- Nav Item - Messages -->
-      <li class="nav-item dropdown no-arrow mx-1">
+      <li class="nav-item dropdown no-arrow mx-1 nav-messages">
         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-envelope fa-fw"></i>
           <!-- Counter - Messages -->

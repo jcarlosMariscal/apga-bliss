@@ -315,11 +315,65 @@
   .form-search-576 {
     width: 45vw !important;
   }
-  .form-search-576 form {
-    /* background-color: purple; */
-    /* width: 100%; */
-  }
   .form-search-576 form .input-group {
     width: 100% !important;
   }
+}
+.active {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  #select_espacio {
+    width: 40vw !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav-link {
+    display: flex !important;
+  }
+  .nav-link > i {
+    font-size: 20px !important;
+  }
+  .nav-link > span {
+    font-size: 16px !important;
+  }
+  .sidebar .nav-item .collapse .collapse-inner .collapse-item,
+  .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+    padding: 0.3rem 1rem;
+    display: block;
+    color: #ffffffcc;
+    text-decoration: none;
+    border-radius: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
+  .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-search,
+  .nav-alerts,
+  .nav-messages,
+  .texto-espacio {
+    display: none !important;
+  }
+  #select_espacio {
+    width: 30vw !important;
+  }
+}
+.active > .nav-link,
+.active > .nav-link > i {
+  color: #f9f54b !important;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 50%;
+  background-color: #f9f54b;
 }
