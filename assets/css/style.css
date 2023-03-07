@@ -377,3 +377,7 @@
   height: 50%;
   background-color: #f9f54b;
 }
+
+.bg-gradient-primary {
+  background: #205e61 !important;
+}

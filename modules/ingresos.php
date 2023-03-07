@@ -1,23 +1,15 @@
 <!-- Begin Page Content -->
   <div class="container-fluid">
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Ingresos</h1>
-      <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-        <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
-      </a>
-    </div>
-
     <!-- Content Row -->
     <div class="row">
-      <!-- Earnings (Monthly) Card Example -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
+      <!-- GASTOS Card Example -->
+      <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                  Earnings (Monthly)
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                  INGRESO QUINCENAL
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
               </div>
@@ -29,14 +21,14 @@
         </div>
       </div>
 
-      <!-- Earnings (Monthly) Card Example -->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <!-- INGRESOS Card Example -->
+      <div class="col-xl-4 col-md-6 mb-4">
         <div class="card border-left-success shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                  Earnings (Annual)
+                  OTROS INGRESOS
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
               </div>
@@ -48,20 +40,20 @@
         </div>
       </div>
 
-      <!-- Earnings (Monthly) Card Example -->
-      <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-info shadow h-100 py-2">
+      <!-- BALANCE Card Example -->
+      <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">TOTAL</div>
                 <div class="row no-gutters align-items-center">
                   <div class="col-auto">
                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
                   </div>
                   <div class="col">
                     <div class="progress progress-sm mr-2">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -75,7 +67,7 @@
       </div>
 
       <!-- Pending Requests Card Example -->
-      <div class="col-xl-3 col-md-6 mb-4">
+      <!-- <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-warning shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -89,6 +81,63 @@
                 <i class="fas fa-comments fa-2x text-gray-300"></i>
               </div>
             </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between">
+      <h4 class="h5 mb-0 text-gray-800">Administre Ingresos del espacio <b><?php echo ucfirst($espacio); ?></b></h4>
+      <a href="#" v-on:click="modalIngresos" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">
+        <i class="fas fa-plus fa-sm text-white-50"></i> Agregar
+      </a>
+    </div>
+
+    <!-- Content Charts -->
+    <div class="row">
+      <div class="col-12">
+        <div class="tabs">
+          <input type="radio" id="tab1" name="tab-control" checked>
+          <input type="radio" id="tab2" name="tab-control">
+          <ul>
+            <li title="Features">
+              <label for="tab1" role="button">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+                </svg><br>
+                <span>Ingresos Feb 2023</span>
+              </label>
+            </li>
+            <li title="Delivery Contents">
+              <label for="tab2" role="button">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                </svg><br>
+                <span>Ver en Gráfica</span>
+              </label>
+            </li>
+          </ul>
+          <!-- <div class="slider"><div class="indicator"></div></div> -->
+          <div class="content">
+            <section class="section-chart">
+              <h2>Ingresos Feb 2023</h2>
+              <table class="table table-separate table-hover table-head-custom table-checkable" id="datatable-ingresos">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Categoria</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+              </table>
+            </section>
+            <section class="section-chart">
+              <h2>Ver en Gráfica</h2>
+              <canvas id="myChart2"></canvas>
+            </section>
           </div>
         </div>
       </div>
@@ -164,136 +213,117 @@
       </div>
     </div>
 
-    <!-- Content Row -->
-    <div class="row">
-      <!-- Content Column -->
-      <div class="col-lg-6 mb-4">
-        <!-- Project Card Example -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+    <!-- ----------------------MODAL AGREGAR/EDITAR INGRESOS -->
+    <div class="modal fade" id="modalIngresos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{titulo_modal}}</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
           </div>
-          <div class="card-body">
-            <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-            <div class="progress mb-4">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-            <div class="progress mb-4">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-            <div class="progress mb-4">
-              <div class="progress-bar" role="progressbar" style="width: 60%"  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-            <div class="progress mb-4">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="modal-body">
+            <div class="row d-flex justify-content-center">
+              <form id="formIngreso" style="width: 94%;">
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="exampleInputEmail1" class="form-label">Cantidad</label>
+                      </div>
+                      <div class="col-5">
+                        <input type="number" class="form-control" name="cantidad" v-model="cantidad">
+                      </div>
+                      <div class="col-3">
+                        <select name="moneda" id="moneda" class="form-select" disabled style="font-size: 10px !important;">
+                          <option value="MXN">MXN</option>
+                          <option value="USD" >USD</option>
+                          <option value="HTS" >HTS</option>
+                          <option value="VED" >VED</option>
+                          <option value="YGG" >YGG</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="exampleInputEmail1" class="form-label">Categoria</label>
+                      </div>
+                      <div class="col-8">
+                        <select name="categoria" id="categoria" class="form-control" v-model="categoria">
+                          <option value="" disabled>Seleccionar</option>
+                          <!-- <option v-for="esp in allEspacios" :value="esp.id_tipoEspacio">{{esp.nombre}}</option> -->
+                          <option v-for="cat in allCategorias" :value="cat.id_cIngreso">{{cat.nombre}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="exampleInputEmail1" class="form-label">Fecha</label>
+                      </div>
+                      <div class="col-8">
+                        <input type="datetime-local" name="fecha" class="form-control" v-model="fecha">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="exampleInputEmail1" class="form-label">Tipo</label>
+                      </div>
+                      <div class="col-8">
+                        <select name="tipo" id="tipo" class="form-control" v-model="tipo">
+                          <option value="1" selected>Efectivo</option>
+                          <option value="0">Tarjeta Débito</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-3">
+                        <label for="exampleInputEmail1" class="form-label">Descripción</label>
+                      </div>
+                      <div class="col-9">
+                        <input type="text" name="descripcion" class="form-control" v-model="descripcion">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3 col-6">
+                    <div class="row">
+                      <div class="col-3">
+                        <label for="exampleInputEmail1" class="form-label">Espacio</label>
+                      </div>
+                      <div class="col-9">
+                        <select name="espacio" id="espacio" class="form-control" v-model="espacio">
+                          <option value="" disabled>Seleccionar</option>
+                          <option v-for="esp in allEspacios" :value="esp.id_tipoEspacio">{{esp.nombre}}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex flex-row justify-content-end">
+                  <button type="button" style="width:15%;" class="btn btn-secondary m-2" data-dismiss="modal"><span aria-hidden="true">X</span> Cerrar</button>
+                  <button type="button" v-on:click="agregarIngreso" v-if="!editar" style="width:15%;" class="btn btn-success m-2"><i class="fas fa-plus fa-sm text-white-50"></i> Agregar</button>
+                  <button type="button" v-on:click="editarIngreso" v-if="editar" style="width:15%;" class="btn btn-primary m-2"><i class="fas fa-pen fa-sm text-white-50"></i> Editar</button>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-
-        <!-- Color System -->
-        <div class="row">
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-primary text-white shadow">
-              <div class="card-body">
-                Primary
-                <div class="text-white-50 small">#4e73df</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-success text-white shadow">
-              <div class="card-body">
-                Success
-                <div class="text-white-50 small">#1cc88a</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-info text-white shadow">
-              <div class="card-body">
-                Info
-                <div class="text-white-50 small">#36b9cc</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-warning text-white shadow">
-              <div class="card-body">
-                Warning
-                <div class="text-white-50 small">#f6c23e</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-danger text-white shadow">
-              <div class="card-body">
-                Danger
-                <div class="text-white-50 small">#e74a3b</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-secondary text-white shadow">
-              <div class="card-body">
-                Secondary
-                <div class="text-white-50 small">#858796</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-light text-black shadow">
-              <div class="card-body">
-                Light
-                <div class="text-black-50 small">#f8f9fc</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4">
-            <div class="card bg-dark text-white shadow">
-              <div class="card-body">
-                Dark
-                <div class="text-white-50 small">#5a5c69</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4">
-        <!-- Illustrations -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-          </div>
-          <div class="card-body">
-            <div class="text-center">
-              <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="assets/img/undraw_posting_photo.svg" alt="...">
-            </div>
-            <p>
-              Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!
-            </p>
-            <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
-          </div>
-        </div>
-      <!-- Approach -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-          </div>
-          <div class="card-body">
-            <p>
-              SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.
-            </p>
-            <p class="mb-0">
-              Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.
-            </p>
-          </div>
+          <!-- <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div> -->
         </div>
       </div>
     </div>

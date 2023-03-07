@@ -65,9 +65,12 @@ if (!isset($_SESSION['user_token'])) {
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <script src="./assets/js/sweetalert2.min.js"></script>
     <link href="./assets/css/sb-admin-2.css" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/generar-font/stylesheets/universal-icon-picker.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <script  src="./assets/js/vue.global.js"></script>
 
@@ -101,27 +104,6 @@ if (!isset($_SESSION['user_token'])) {
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
-    <!-- Logout Modal-->
-    <!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -134,10 +116,11 @@ if (!isset($_SESSION['user_token'])) {
 
   <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="main.js"></script>
   <script src="./modules/<?php echo $js; ?>"></script>
+  <script src="main.js"></script>
   <!-- <script src="assets/js/demo/chart-area-demo.js"></script> -->
   <!-- <script src="assets/js/demo/chart-pie-demo.js"></script> -->
 </body>

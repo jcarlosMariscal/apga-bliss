@@ -76,7 +76,7 @@
     // ---------- OBTENER DATOS DE ESPACIOS DE UN USUARIO ---------------
     function obtenerIngresos($espacio){
       try {
-        $sql = "SELECT A.id_ingreso, A.cantidad, A.descripcion, A.fecha, B.nombre FROM ingreso A INNER JOIN categoria_ingreso B ON A.id_cIngreso = B.id_cIngreso INNER JOIN espacio C ON A.id_espacio = C.id_espacio INNER JOIN tipo_espacio D ON C.id_tipoEspacio = D.id_tipoEspacio WHERE LOWER(D.nombre) = LOWER(?)";
+        $sql = "SELECT A.id_ingreso, A.cantidad, A.descripcion, A.fecha, B.nombre,B.icono,B.color FROM ingreso A INNER JOIN categoria_ingreso B ON A.id_cIngreso = B.id_cIngreso INNER JOIN espacio C ON A.id_espacio = C.id_espacio INNER JOIN tipo_espacio D ON C.id_tipoEspacio = D.id_tipoEspacio WHERE LOWER(D.nombre) = LOWER(?)";
         $query = $this->cnx->prepare($sql);
         $query -> bindParam(1, $espacio);
         $query -> execute();
@@ -89,9 +89,9 @@
                 'fecha' => $row['fecha'],
                 'descripcion' => $row['descripcion'],
                 'cantidad' => $row['cantidad'],
-                'categoria' => $row['nombre'],
-                'editar' => '<button type="button" name="editar" eId="'.$row["id_ingreso"].'" class="btn btn-primary editar"><i class="bx bx-edit-alt"></i></a>',
-                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_ingreso"].'"" class="btn btn-primary editar"><i class="bx bx-trash"></i></a>'
+                'categoria' => '<div class="d-flex align-items-center justify-content-center" style="width:35px; height:35px; background:'.$row["color"].';border-radius:50%; color:#fff;" title="'.$row['nombre'].'">'.$row['icono'].'</div>',
+                'editar' => '<button type="button" name="editar" eId="'.$row["id_ingreso"].'" class="btn btn-success editar"><i class="bx bx-edit-alt"></i></a>',
+                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_ingreso"].'"" class="btn btn-danger editar"><i class="bx bx-trash"></i></a>'
               );
               $ingresos_obj[] = $ingreso;
             }
