@@ -159,10 +159,10 @@
               $ingreso = array(
                 'nombre' => $row['nombre'],
                 'descripcion' => $row['descripcion'],
-                'icono' => $row['icono'],
+                'icono' => '<div class="d-flex align-items-center justify-content-center" style="width:35px; height:35px; background:#205e61;border-radius:50%; color:#fff;" title="'.$row['nombre'].'">'.$row['icono'].'</div>',
                 'color' => "<div style='width:20px; height:20px;border-radius:50%;background:".$row['color'].";'></div>",
-                'editar' => '<button type="button" name="editarCategoriaIngreso" editIdIngreso="'.$row["id_cIngreso"].'" class="btn btn-primary editarCategoriaIngreso"><i class="bx bx-edit-alt"></i></a>',
-                'archivar' => '<button type="button" name="deleteCategoriaIngreso" deleteIdIngreso=""'.$row["id_cIngreso"].'"" class="btn btn-danger deleteCategoriaIngreso"><i class="bx bx-archive"></i></a>'
+                'editar' => '<button title="Editar '.$row['nombre'].'" type="button" name="editarCategoriaIngreso" editIdIngreso="'.$row["id_cIngreso"].'" class="btn btn-primary editarCategoriaIngreso"><i class="bx bx-edit-alt"></i></a>',
+                'archivar' => '<button title="Eliminar '.$row['nombre'].'" type="button" name="deleteCategoriaIngreso" deleteIdIngreso=""'.$row["id_cIngreso"].'"" class="btn btn-danger deleteCategoriaIngreso"><i class="bx bx-archive"></i></a>'
               );
               $ingresos_obj[] = $ingreso;
             }
@@ -197,10 +197,10 @@
               $ingreso = array(
                 'nombre' => $row['nombre'],
                 'descripcion' => $row['descripcion'],
-                'icono' => $row['icono'],
+                'icono' => '<div class="d-flex align-items-center justify-content-center" style="width:35px; height:35px; background:#205e61;border-radius:50%; color:#fff;" title="'.$row['nombre'].'">'.$row['icono'].'</div>',
                 'color' => "<div style='width:20px; height:20px;border-radius:50%;background:".$row['color'].";'></div>",
-                'editar' => '<button type="button" name="editarCategoriaGasto" editIdGasto="'.$row["id_cGasto"].'" class="btn btn-primary editarCategoriaGasto"><i class="bx bx-edit-alt"></i></a>',
-                'archivar' => '<button type="button" name="deleteCategoriaGasto" deleteIdGasto=""'.$row["id_cGasto"].'"" class="btn btn-danger deleteCategoriaGasto"><i class="bx bx-archive"></i></a>'
+                'editar' => '<button title="Editar '.$row['nombre'].'" type="button" name="editarCategoriaGasto" editIdGasto="'.$row["id_cGasto"].'" class="btn btn-primary editarCategoriaGasto"><i class="bx bx-edit-alt"></i></a>',
+                'archivar' => '<button title="Eliminar '.$row['nombre'].'"  type="button" name="deleteCategoriaGasto" deleteIdGasto=""'.$row["id_cGasto"].'"" class="btn btn-danger deleteCategoriaGasto"><i class="bx bx-archive"></i></a>'
               );
               $gastos_obj[] = $ingreso;
             }

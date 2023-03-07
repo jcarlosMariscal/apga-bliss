@@ -55,25 +55,21 @@ if (!isset($_SESSION['user_token'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
-
     <title><?php echo $seccion; ?> | Apga Bliss</title>
-
+    <link href="./assets/css/sb-admin-2.css" rel="stylesheet">
+    <script src="./assets/js/sweetalert2.min.js"></script>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script  src="./assets/js/vue.global.js"></script>
     <!-- Custom fonts for this template-->
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
     <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-    <script src="./assets/js/sweetalert2.min.js"></script>
-    <link href="./assets/css/sb-admin-2.css" rel="stylesheet">
-    <link href="./assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/generar-font/stylesheets/universal-icon-picker.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script  src="./assets/js/vue.global.js"></script>
-
 </head>
 <body id="page-top">
   <!-- Page Wrapper -->
@@ -107,16 +103,11 @@ if (!isset($_SESSION['user_token'])) {
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <!-- <script src="assets/js/sb-admin-2.js"></script> -->
-
-  <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+  <script src="https://unpkg.com/vanilla-picker@2"></script>
+  <script src="./assets/generar-font/universal-icon-picker.js"></script>
 
   <!-- Page level custom scripts -->
   <script src="./modules/<?php echo $js; ?>"></script>
