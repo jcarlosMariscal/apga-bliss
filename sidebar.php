@@ -21,7 +21,7 @@
   <!-- Divider -->
   <hr class="sidebar-divider">
   <!-- Heading -->
-  <div class="sidebar-heading">Vistas</div>
+  <div class="sidebar-heading">Vistas Principales</div>
   <!-- Nav Item - Ingresos -->
   <li class="nav-item <?php echo ($view == 'ingresos') ? 'active' : '' ;  ?>">
     <a class="nav-link" href="index.php?espacio=<?php echo $_SESSION['espacio']; ?>&view=ingresos">
@@ -54,7 +54,14 @@
   <hr class="sidebar-divider">
   
   <!-- Heading -->
-  <div class="sidebar-heading">Interfaces</div>
+  <div class="sidebar-heading">Personalice gastos e ingresos</div>
+  <!-- Nav Item - Categorías -->
+  <li class="nav-item">
+    <a class="nav-link" href="index.php?espacio=<?php echo $_SESSION['espacio']; ?>&view=categorias" >
+      <i class='bx bx-purchase-tag-alt'></i>
+      <span>Categorías</span>
+    </a>
+  </li>
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

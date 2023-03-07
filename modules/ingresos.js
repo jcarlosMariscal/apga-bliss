@@ -280,20 +280,6 @@ var app = new Vue({
           }
         });
     },
-    modalGastos() {
-      this.editar = false;
-      this.titulo_modal = "Nuevo ingreso";
-      this.cantidad = null;
-      this.categoria = "";
-      this.fecha = null;
-      this.tipo = "1";
-      this.descripcion = null;
-      this.espacio = "";
-      let modalIngresos = new bootstrap.Modal(
-        document.getElementById("modalIngresos")
-      );
-      modalIngresos.show();
-    },
     // ------------------- FUNCIÓN PARA GENERAR GRÁFICAS -------------------
     generarGraficas() {
       // const ctx = document.getElementById("myChart");

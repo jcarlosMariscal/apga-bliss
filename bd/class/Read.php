@@ -472,7 +472,7 @@
         // ---------- OBTENER DATOS DE ESPACIOS DE UN USUARIO ---------------
     function obtenerGastos($espacio){
       try {
-        $sql = "SELECT A.id_gasto, A.cantidad, A.fecha, B.alias, C.nombre FROM gasto A INNER JOIN espacio B ON A.id_espacio = B.id_espacio INNER JOIN categoria_gasto C ON A.id_cGasto = C.id_cGasto INNER JOIN tipo_espacio D ON B.id_tipoEspacio = D.id_tipoEspacio WHERE D.nombre = ?";
+        $sql = "SELECT A.id_gasto, A.cantidad, A.fecha, B.alias, C.nombre, C.icono, C.color FROM gasto A INNER JOIN espacio B ON A.id_espacio = B.id_espacio INNER JOIN categoria_gasto C ON A.id_cGasto = C.id_cGasto INNER JOIN tipo_espacio D ON B.id_tipoEspacio = D.id_tipoEspacio WHERE D.nombre = ?";
         $query = $this->cnx->prepare($sql);
         $query -> bindParam(1, $espacio);
         $query -> execute();
@@ -485,9 +485,9 @@
                 'fecha' => $row['fecha'],
                 'cantidad' => $row['cantidad'],
                 'espacio' => $row['alias'],
-                'categoria' => $row['nombre'],
-                'editar' => '<button type="button" name="editar" eId="'.$row["id_gasto"].'" class="btn btn-primary editar"><i class="bx bx-edit-alt"></i></a>',
-                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_gasto"].'"" class="btn btn-primary editar"><i class="bx bx-trash"></i></a>'
+                'categoria' =>'<div class="d-flex align-items-center justify-content-center" style="width:35px; height:35px; background:'.$row["color"].';border-radius:50%; color:#fff;" title="'.$row['nombre'].'">'.$row['icono'].'</div>',
+                'editar' => '<button type="button" name="editar" eId="'.$row["id_gasto"].'" class="btn btn-warning editar"><i class="bx bx-edit-alt"></i></a>',
+                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_gasto"].'"" class="btn btn-danger editar"><i class="bx bx-trash"></i></a>'
               );
               $gastos_obj[] = $ingreso;
             }
