@@ -234,7 +234,7 @@
                         <label for="exampleInputEmail1" class="form-label">Categoria</label>
                       </div>
                       <div class="col-8">
-                        <select name="categoria" id="categoria" class="form-select" v-model="categoria">
+                        <select name="categoria" id="categoria" class="form-control" v-model="categoria">
                           <option value="" disabled>Seleccionar</option>
                           <!-- <option v-for="esp in allEspacios" :value="esp.id_tipoEspacio">{{esp.nombre}}</option> -->
                           <option v-for="cat in allCategorias" :value="cat.id_cGasto">{{cat.nombre}}</option>
@@ -260,7 +260,7 @@
                         <label for="exampleInputEmail1" class="form-label">Espacio</label>
                       </div>
                       <div class="col-8">
-                        <select name="espacio" id="espacio" class="form-select" v-model="espacio">
+                        <select name="espacio" id="espacio" class="form-control" v-model="espacio">
                           <option value="" disabled>Seleccionar</option>
                           <option v-for="esp in allEspacios" :value="esp.id_tipoEspacio">{{esp.nombre}}</option>
                         </select>

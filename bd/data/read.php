@@ -55,6 +55,10 @@ if(!empty($_POST)){
       $espacio = (isset($_POST['espacio']) ? $_POST['espacio'] : NULL); 
       $query -> obtenerGastos($espacio);
       break;
+    case 'getEspacioEditar':
+      $id_espacio = (isset($_POST['id_espacio']) ? $_POST['id_espacio'] : NULL); 
+      $query -> obtenerEspacioEditar($id_espacio);
+      break;
     default:
       # code...
       break;

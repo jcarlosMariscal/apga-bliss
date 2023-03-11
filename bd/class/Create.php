@@ -172,5 +172,37 @@
           echo $json;
       }
     }
+    function buscarIdUsuario($token){
+      try {
+        $sql = "SELECT id_usuario FROM usuario WHERE token = ?";
+        $query = $this->cnx->prepare($sql);
+        $query -> bindParam(1, $token);
+        $query -> execute();
+        $id = $query->fetch()['id_usuario'];
+        return $id;
+      } catch (PDOException $th) {
+        return false;
+      }
+    }
+    function crearEspacio($alias, $detalles, $espacio,$token) {
+      try {
+        $id_usuario = $this->buscarIdUsuario($token);
+        $activo = 1;
+        $sql = "INSERT INTO espacio(alias, detalles, activo, id_usuario, id_tipoEspacio) VALUES (?,?,?,?,?)";
+        $query = $this->cnx->prepare($sql);
+        $data = array($alias, $detalles, $activo,$id_usuario, $espacio);
+        $query -> execute($data);
+        if($query){
+          $json = '{"status": "success","message": "El Espacio se ha registrado","data": false}';
+          echo $json;
+        }else {
+          $json = '{"status": "error","message": "No se ha podido registrar el espacio.","data": false}';
+          echo $json;
+        }
+      } catch (PDOException $th) {
+        $json = '{"status": "err","message": "No se ha podido registrar el espacio Exception. '.$nombre.','.$descripcion.','.$color.','.$icono.'","data": false}';
+          echo $json;
+      }
+    }
   }
   ?>

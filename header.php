@@ -25,6 +25,7 @@
         <select name="select_espacio" id="select_espacio" class="form-control bg-light border-0 small select" v-model="select_espacio" @change="cambiarEspacio()">
           <option value="personal" >Personal</option>
           <option value="familiar" >Familiar</option>
+          <option value="otro" >Otro</option>
         </select>
         <!-- <div class="input-group-append">
           <button class="btn btn-primary" type="button">

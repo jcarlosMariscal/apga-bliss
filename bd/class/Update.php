@@ -98,5 +98,23 @@
           echo $json;
       }
     }
+    function editarEspacio($alias, $detalles, $espacio, $id_espacio) {
+      try {
+        $sql = "UPDATE espacio SET alias = ?, detalles = ?, id_tipoEspacio = ? WHERE id_espacio = ?";
+        $query = $this->cnx->prepare($sql);
+        $data = array($alias, $detalles, $espacio,$id_espacio);
+        $query -> execute($data);
+        if($query){
+          $json = '{"status": "success","message": "La espacio se ha actualizado","data": false}';
+          echo $json;
+        }else {
+          $json = '{"status": "error","message": "No se ha podido actualizar la espacio.","data": false}';
+          echo $json;
+        }
+      } catch (PDOException $th) {
+        $json = '{"status": "err","message": "No se ha podido registrar la espacio Exception. '.$nombre.','.$descripcion.','.$color.','.$icono.'","data": false}';
+          echo $json;
+      }
+    }
   }
   ?>

@@ -34,6 +34,13 @@ if(!empty($_POST)){
       $color = (isset($_POST['colorGasto']) ? $_POST['colorGasto'] : NULL); 
       $query -> agregarCatGas($nombre, $descripcion, $icono, $color);
       break;
+    case 'crearEspacio': // Agregar categoria para ingresos
+      $alias = (isset($_POST['alias']) ? $_POST['alias'] : NULL); 
+      $detalles = (isset($_POST['detalles']) ? $_POST['detalles'] : NULL); 
+      $espacio = (isset($_POST['espacio']) ? $_POST['espacio'] : NULL);
+      $token = (isset($_POST['token']) ? $_POST['token'] : NULL);
+      $query -> crearEspacio($alias, $detalles, $espacio,$token);
+      break;
     default:
       # code...
       break;

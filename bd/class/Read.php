@@ -43,7 +43,7 @@
     function obtenerEspacios($token){
       try {
         $espacios=array();
-        $sql = "SELECT A.id_espacio, A.alias,A.detalles,A.activo,A.fecha, C.nombre, C.descripcion FROM espacio A INNER JOIN usuario B ON A.id_usuario = B.id_usuario INNER JOIN tipo_espacio C ON A.id_tipoEspacio = C.id_tipoEspacio WHERE B.token= ?";
+        $sql = "SELECT A.id_espacio, A.alias,A.detalles,A.activo,A.fecha, C.nombre,C.id_tipoEspacio, C.descripcion FROM espacio A INNER JOIN usuario B ON A.id_usuario = B.id_usuario INNER JOIN tipo_espacio C ON A.id_tipoEspacio = C.id_tipoEspacio WHERE B.token= ?";
         $query = $this->cnx->prepare($sql);
         $query -> bindParam(1, $token);
         $query -> execute();
@@ -284,6 +284,31 @@
           echo $json;
       }
     }
+    // ---------- OBTENER ESPACIO A EDITAR  ---------------
+    function obtenerEspacioEditar($id_espacio){
+      try {
+        $sql = "SELECT * FROM espacio WHERE id_espacio = ?";
+        $query = $this->cnx->prepare($sql);
+        $query -> bindParam(1, $id_espacio);
+        $query -> execute();
+        if($query){
+          $result = $query->fetchAll(PDO::FETCH_ASSOC);
+          if ($result) {
+            $json = json_encode(array('status' => 'success','message' => 'Datos obtenidos','result' => $result));
+          } else {
+            $json = json_encode(array('status' => 'error','message' => 'No se encontraron datos', 'result' => false));
+          }
+          header('Content-Type: application/json');
+          echo $json;
+        }else {
+          $json = '{"status": "error","message": "No se ha podido obtener los datos de los espacios","result": false}';
+          echo $json;
+        }
+      } catch (PDOException $th) {
+        $json = '{"status": "err","message": "Ha ocurrido un error al intentar obtener la información de categorias","result": false}';
+          echo $json;
+      }
+    }
     // ---------- OBTENER LAS ESPACIOS  ---------------
     // ---------- OBTENER LAS CATEGORIAS DE INGRESOS ---------------
     function categoriaIngresosForm(){
@@ -487,7 +512,7 @@
                 'espacio' => $row['alias'],
                 'categoria' =>'<div class="d-flex align-items-center justify-content-center" style="width:35px; height:35px; background:'.$row["color"].';border-radius:50%; color:#fff;" title="'.$row['nombre'].'">'.$row['icono'].'</div>',
                 'editar' => '<button type="button" name="editar" eId="'.$row["id_gasto"].'" class="btn btn-warning editar"><i class="bx bx-edit-alt"></i></a>',
-                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_gasto"].'"" class="btn btn-danger editar"><i class="bx bx-trash"></i></a>'
+                'eliminar' => '<button type="button" name="eliminar" dId=""'.$row["id_gasto"].'"" class="btn btn-danger eliminar"><i class="bx bx-trash"></i></a>'
               );
               $gastos_obj[] = $ingreso;
             }

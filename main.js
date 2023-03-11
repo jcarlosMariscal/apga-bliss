@@ -158,6 +158,7 @@ var header = new Vue({
       let newForm = new FormData();
       newForm.append("action", "obtenerDatos");
       const USER_TOKEN = localStorage.getItem("user_token");
+      console.log("Desde Main User Token = " + USER_TOKEN);
       newForm.append("user_token", USER_TOKEN);
       fetch("./bd/data/read.php", {
         method: "POST",
