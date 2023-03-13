@@ -119,7 +119,7 @@
                         <label for="exampleInputEmail1" class="form-label">Color de la Categoria</label>
                       </div>
                       <div class="col-lg-3 col-3">
-                        <div id="parent" style="margin-top:10px;width:150px;height:180px;border-radius:10px;cursor:pointer;" class="d-flex align-items-center justify-content-center">
+                        <div id="parent" style="margin-top:10px;width:150px;height:40px;border-radius:10px;cursor:pointer;" class="d-flex align-items-center justify-content-center">
                         <span class="text-white">Seleccionar </span><i class='bx bxs-hand-up' style="font-size:24px;color:white;" ></i>
                         </div>
                         <input type="hidden" class="form-control" id="colorIngreso" v-model="colorIngreso" name="colorIngreso">
@@ -199,7 +199,7 @@
                         <label for="exampleInputEmail1" class="form-label">Color de la Categoria</label>
                       </div>
                       <div class="col-lg-3 col-3">
-                        <div id="parent2" style="margin-top:10px;width:150px;height:180px;border-radius:10px;cursor:pointer;" class="d-flex align-items-center justify-content-center">
+                        <div id="parent2" style="margin-top:10px;width:150px;height:40px;border-radius:10px;cursor:pointer;" class="d-flex align-items-center justify-content-center">
                         <span class="text-white">Seleccionar </span><i class='bx bxs-hand-up' style="font-size:24px;color:white;" ></i>
                         </div>
                         <input type="hidden" class="form-control" id="colorGasto" v-model="colorGasto" name="colorGasto">

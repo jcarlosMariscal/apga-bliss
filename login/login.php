@@ -30,28 +30,28 @@
     <script  src="../assets/js/vue.global.js"></script>
 </head>
 
-<body class="bg-gradient-primary">
+<body class="" style="height: 100vh !important;">
 
-    <div class="container" id="vue-login">
+    <div class="container" id="vue-login" style="padding: 0 !important; margin: 0 !important;">
 
         <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="row" style="padding: 0 !important; margin:0 !important; width: 100vw;">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-10 col-lg-12 col-md-9" style="padding: 0 !important; margin: 0 !important; width: 100vw;">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg my-5" style="padding: 0 !important; margin: 0 !important; width: 100vw;">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6" style="margin-top: 15vh;">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bienvenido a Apga!</h1>
                                     </div>
                                     <form class="user needs-validation" @submit.prevent="login" id="formulario" novalidate>
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="email" class="form-control"
                                                 id="email" v-model="email" name="email"
                                                 placeholder="Escriba su correo electrónico"  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
                                           <div class="valid-feedback">
@@ -62,7 +62,7 @@
                                           </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control"
                                                 id="password" v-model="password" name="password" placeholder="Contraseña" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
                                             <div class="valid-feedback"> Su contraseña es fuerte!</div>
                                             <div class="invalid-feedback">
@@ -79,7 +79,7 @@
                                         <div class="alert alert-danger mt-3" role="alert" v-if="statusErr">
                   {{error}}
                 </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-block">
                                             Iniciar Sesión
                                         </button>
                                         <!-- <hr> -->

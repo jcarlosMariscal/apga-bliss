@@ -11316,12 +11316,14 @@ a:focus {
 }
 
 .bg-login-image {
+  height: 100vh;
   background: url("https://www.realtime-7.com/assets/images/forget-bg.png");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
+  height: 100vh;
   background: url("https://djangostars.com/wp-content/uploads/2023/02/image6-min.png");
   background-position: center;
   background-size: cover;

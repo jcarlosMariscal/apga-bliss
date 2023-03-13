@@ -37,6 +37,11 @@ if (!isset($_SESSION['user_token'])) {
       $page = "configuracion.php";
       $seccion = "Configuración";
     break;
+    case 'perfil':
+      $page = "perfil.php";
+      $seccion = "Perfil";
+      $js = "perfil.js";
+    break;
     default:
       $page = "inicio.php";
       $seccion = "Inicio";

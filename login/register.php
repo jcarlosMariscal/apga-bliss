@@ -31,22 +31,22 @@
 
 </head>
 
-<body class="bg-gradient-primary">
-  <div class="container" id="vue-register">
-    <div class="card o-hidden border-0 shadow-lg my-5">
+<body class="bg-gradient-primary" style="padding: 0 !important;">
+  <div class="container" id="vue-register" style="margin: 0 !important; width: 100vw !important; padding: 0; height: 100vh;">
+    <div class="card o-hidden border-0 shadow-lg" style="width: 100vw !important; height: 100%;">
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
           <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
           <div class="col-lg-7">
-            <div class="p-5">
+            <div class="p-5 mt-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Regístrese!</h1>
               </div>
               <form class="user needs-validation" @submit.prevent="register" id="formulario" novalidate>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" v-model="nombre" name="nombre" class="form-control form-control-user"  minlength="4" maxlength="20" pattern="[A-Za-zÀ-ÿ\s]+" required  placeholder="Nombre">
+                    <input type="text" v-model="nombre" name="nombre" class="form-control "  minlength="4" maxlength="20" pattern="[A-Za-zÀ-ÿ\s]+" required  placeholder="Nombre">
                     <div class="valid-feedback">
                       ¡Gracias por proporcionar su nombre!
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" v-model="apellidos" name="apellidos" class="form-control form-control-user" minlength="4" maxlength="40" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Apellidos">
+                    <input type="text" v-model="apellidos" name="apellidos" class="form-control" minlength="4" maxlength="40" pattern="[A-Za-zÀ-ÿ\s]+" required placeholder="Apellidos">
                     <div class="valid-feedback">
                       ¡Gracias por proporcionar sus apellidos!
                     </div>
@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" v-model="email" name="email" class="form-control form-control-user" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required placeholder="Correo Electrónico">
+                  <input type="email" v-model="email" name="email" class="form-control" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required placeholder="Correo Electrónico">
                   <div class="valid-feedback">
                     ¡Gracias por proporcionar su correo!
                   </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12 mb-3 mb-sm-0">
-                    <input type="password" v-model="password" name="password" class="form-control form-control-user" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required placeholder="Password">
+                    <input type="password" v-model="password" name="password" class="form-control" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required placeholder="Password">
                     <div class="valid-feedback">Su contraseña es fuerte!</div>
                     <div class="invalid-feedback">
                       Mínimo ocho caracteres, al menos una letra y un número
@@ -86,7 +86,7 @@
                 </div> -->
                 </div>
                 <div class="alert alert-danger mt-3" role="alert" v-if="statusErr">{{error}}</div>
-                <button type="submit" class="btn btn-primary btn-user btn-block">Crear Cuenta</button>
+                <button type="submit" class="btn btn-primary btn-block">Crear Cuenta</button>
                 <!-- <hr>
                 <a href="index.html" class="btn btn-google btn-user btn-block">
                   <i class="fab fa-google fa-fw"></i> Register with Google

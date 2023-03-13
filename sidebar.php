@@ -50,6 +50,13 @@
       <span>Configuración</span>
     </a>
   </li>
+  <!-- Nav Item - Pérfil -->
+  <li class="nav-item <?php echo ($view == 'perfil') ? 'active' : '' ;  ?>">
+    <a class="nav-link" href="index.php?espacio=<?php echo $_SESSION['espacio']; ?>&view=perfil">
+      <i class='bx bx-user-circle'></i>
+      <span>Perfil</span>
+    </a>
+  </li>
   <!-- Divider -->
   <hr class="sidebar-divider">
   
@@ -63,7 +70,7 @@
     </a>
   </li>
   <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
       <i class="fas fa-fw fa-cog"></i>
       <span>Componentes</span>
@@ -75,9 +82,9 @@
         <a class="collapse-item" href="#">Cards</a>
       </div>
     </div>
-  </li>
+  </li> -->
   <!-- Nav Item - Utilities Collapse Menu -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
       <i class="fas fa-fw fa-wrench"></i>
       <span>Utilidades</span>
@@ -91,14 +98,14 @@
         <a class="collapse-item" href="#">Otros</a>
       </div>
     </div>
-  </li>
+  </li> -->
   <!-- Divider -->
   <hr class="sidebar-divider">
   <!-- Heading -->
-  <div class="sidebar-heading">Complementos</div>
+  <!-- <div class="sidebar-heading">Complementos</div> -->
   
   <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
       <i class="fas fa-fw fa-folder"></i>
       <span>Paginas</span>
@@ -115,17 +122,17 @@
           <a class="collapse-item" href="#">Página en blanco</a>
         </div>
     </div>
-  </li>
+  </li> -->
   
   <!-- Nav Item - Charts -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link" href="#"><i class="fas fa-fw fa-chart-area"></i><span>Gráficas</span></a>
-  </li>
+  </li> -->
   
   <!-- Nav Item - Tables -->
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link" href="#"><i class="fas fa-fw fa-table"></i><span>Tablas</span></a>
-  </li>
+  </li> -->
   <li class="nav-item">
     <a class="nav-link" href="#" v-on:click="logout"><i class='bx bx-log-out'></i><span>Cerrar sesión</span></a>
   </li>
